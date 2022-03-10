@@ -1,0 +1,420 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css');
+
+:root {
+  --red: #d63d38;
+  --light-grey: #f8f7f7;
+  --bg-white: #d7d1c8;
+  --ribbon-blue: #063d5e;
+  --bg-footer-grey: #333333;
+  --logo-grey: #cccccc;
+  --shadow: 0px 0px 20px rgb(204, 203, 203);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-y: auto;
+  overflow-x: hidden !important;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  a {
+    color: grey;
+  }
+
+  a:hover {
+    color: var(--red);
+  }
+}
+
+.count {
+  position: absolute;
+  margin-top: -0.5em;
+}
+
+.img-wrapper {
+  width: 150px;
+  img {
+    width: 100% !important;
+    object-fit: contain;
+  }
+}
+
+header {
+  box-shadow: var(--shadow);
+}
+
+.ribbon {
+  background-color: var(--ribbon-blue);
+  height: 5vh;
+  width: 100%;
+  margin: 0 !important;
+}
+
+.banner-wrapper {
+  margin: 0 !important;
+  height: 40vh;
+  width: 100%;
+  background-image: url('/images/hero.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  // background-position: center;
+}
+
+.banner-links {
+  a {
+    width: 40px;
+    height: 40px;
+    padding: 0.5em;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5em;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.banner-message {
+  background-color: rgba(255, 255, 255, 0.253);
+  border: 1px solid rgba(255, 255, 255, 0.466);
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 1em;
+
+  h2 {
+    color: var(--red);
+    text-transform: uppercase;
+    font-size: 2rem;
+  }
+}
+
+.headings {
+  padding: 0.5em 1em !important;
+  box-shadow: var(--shadow);
+  margin-top: -2em !important;
+}
+
+.heading-links {
+  width: 30%;
+  div {
+    cursor: pointer;
+    border-right: 1px solid var(--bg-white);
+  }
+
+  .active {
+    border: none;
+    background-color: var(--light-grey);
+
+    @media screen and (max-width: 790px) {
+      background-color: none;
+    }
+  }
+
+  @media screen and (max-width: 790px) {
+    width: 80%;
+    margin: auto;
+    border: none;
+  }
+}
+
+.filter {
+  border: 1px solid var(--logo-grey);
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+
+  div {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0.5em 1em;
+    cursor: pointer;
+
+    img {
+      width: 90%;
+      margin: auto;
+      object-fit: contain;
+    }
+  }
+}
+
+.form-check-label {
+  color: #333333 !important;
+  margin-left: 1px !important;
+}
+
+.dark {
+  border: 1px solid var(--bg-white);
+  width: 80%;
+}
+
+.form-check {
+  padding-left: 1.8em;
+}
+
+.filter-box {
+  border: 1px solid grey;
+  display: flex;
+}
+
+.item {
+  border: 1px solid grey;
+  padding: 0.3em;
+  margin: 0.5em 1em;
+  font-size: 0.8rem;
+  color: var(--bg-footer-grey);
+
+  .bi {
+    cursor: pointer;
+  }
+}
+
+.clear {
+  position: relative;
+  margin-top: -3em;
+  width: fit-content;
+  padding: 0.3em 0.5em;
+  cursor: pointer;
+}
+
+.bi-x-lg {
+  color: #154b9b;
+  font-size: 1rem;
+}
+
+.drop {
+  li {
+    width: 15vw;
+    padding: 0.2em 0.5em;
+
+    a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+        width: 95%;
+      }
+
+      input[type='radio'] {
+        width: 10%;
+      }
+    }
+  }
+}
+
+.input-group {
+  width: 20vw !important;
+}
+
+.card {
+  margin-bottom: 3em;
+  box-shadow: var(--shadow);
+}
+
+.img-div {
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 30vh;
+  background-image: url('/images/colleges.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+
+  h3 {
+    position: relative;
+    bottom: -5em;
+    text-align: center;
+    background-color: rgba(2, 2, 68, 0.3);
+  }
+
+  .backdrop {
+    font-size: 0.8rem;
+    color: white;
+    background-color: rgba(2, 2, 68, 0.3);
+    position: relative;
+    bottom: -11em;
+  }
+}
+
+.tag-item {
+  font-size: 0.8rem;
+}
+
+small {
+  font-size: 0.7rem;
+}
+
+@media screen and (max-width: 790px) {
+  .cards,
+  .sorting {
+    width: 80% !important;
+    margin: auto;
+  }
+
+  .clear {
+    margin-top: 2em;
+  }
+
+  .content {
+    margin: 2em;
+  }
+
+  .check-buttons {
+    margin-top: 2em;
+  }
+}
+
+.page {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  margin-right: 0.3em;
+  border: 1px solid var(--logo-grey);
+  box-shadow: 0px 1px 2px;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.active-page {
+  background-color: rgba(219, 213, 213, 0.26);
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: var(--bg-footer-grey);
+  color: white;
+
+  .footer-wrapper {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+.social-img {
+  width: 35%;
+  display: flex;
+
+  img {
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+    padding: 0.5em;
+    width: 50%;
+    object-fit: contain;
+    margin-right: 0.5em;
+
+    @media screen and (max-width: 790px) {
+      width: 10%;
+      margin: 2em auto;
+    }
+  }
+  @media screen and (max-width: 790px) {
+    width: 80%;
+    margin: 2em auto;
+  }
+}
+
+.email {
+  margin-right: auto;
+  margin-left: 5em;
+  margin-top: 1.5em;
+  width: 30%;
+  height: 50px;
+  background-color: white;
+  border-radius: 25px;
+
+  input {
+    width: 70%;
+    outline: none;
+    border: none;
+  }
+
+  .bi-send-fill {
+    color: grey;
+    font-size: 1.2rem;
+  }
+
+  @media screen and (max-width: 790px) {
+    width: 80%;
+    margin: 2em auto;
+  }
+}
+
+.stay-connected,
+.first-one-lead {
+  // margin-left: -1em !important;
+  font-size: 1.1em;
+
+  @media screen and (max-width: 790px) {
+    font-size: 1rem;
+    margin: 0.5em auto;
+  }
+}
+
+.leading-line {
+  font-size: 0.8rem;
+  color: var(--bg-white);
+
+  p {
+    line-height: 1em;
+    color: var(--bg-white);
+  }
+
+  @media screen and (max-width: 790px) {
+    margin: 0.5em auto;
+    text-align: center;
+  }
+}
+
+.first-row {
+  border-bottom: 1px solid black;
+  padding-bottom: 0.5em;
+}
+
+.second-row {
+  padding: 0.5em 0;
+}
+
+li {
+  list-style: none;
+}
+
+.copyright {
+  padding: 2em;
+  margin: auto;
+  height: 5vh;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      text-align: center;
+      margin-top: -1em;
+      margin-left: 15em;
+      font-size: 0.8rem;
+      color: var(--bg-white);
+    }
+  }
+}
